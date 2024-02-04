@@ -10,17 +10,17 @@ The react app has two pages where one can view all the movies and as well click 
 - It has a <u>Search functionality</u> using useState to store query and useEffect for changing state of the page.
 
 # Images
-Home
+<h2>Home</h2>
 
 ![image](https://github.com/ibz11/MovieFlix/assets/90426909/e67064cb-ab03-4cdb-abbb-1c09bed70881)
 
-Search Function in action
+<h2>Search Function in action</h2>
 
 ![image](https://github.com/ibz11/MovieFlix/assets/90426909/69b42482-adec-435b-9e7e-b446f6f91c6f)
 
 
 
-Single Movie Page
+<h2>Single Movie Page</h2>
 
 ![image](https://github.com/ibz11/MovieFlix/assets/90426909/339ab413-04d9-4fe8-acf0-aeda54a693b5)
 

@@ -1,0 +1,307 @@
+body {
+  margin: 0;
+  padding: 0;
+  background:#000814;
+  color:white;
+}
+.display{
+  color:red;
+}
+.header {
+  position: relative;
+  height: 50vh; /* 50% of the viewport height */
+  overflow: hidden;
+}
+
+.header-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Cover the entire header area */
+}
+
+/* .logo-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.logo {
+  width: 100px; 
+  height: auto;
+} */
+
+.logo-container {
+  position: absolute;
+  top: 2px; /* Adjust the distance from the top as needed */
+  left: 20px; /* Adjust the distance from the left as needed */
+border:1px solid white;
+border-radius: 40%;
+width: fit-content;
+}
+
+.logo {
+  width: 100px; /* Set the width of your logo */
+  height: auto;
+  color:white;
+
+}
+
+/* Main Movie section */
+.movie-container{
+  /* border: 1px solid white; */
+  margin:2em;
+  padding:1em;
+height:max-content;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.search-container{
+  border:1px solid white;
+  text-align:center;
+}
+.search-input{
+  padding:.5em;
+  width:16em;
+  background:black;
+  border:1px solid white;
+  border-radius:.4em;
+  margin: .3em;
+  color:white;
+}
+.search-input:hover{
+  border:1px solid #09bc8a;
+}
+.search-btn {
+  border: 1px solid white;
+  border-radius: .3em;
+  background: black;
+  color: white;
+  padding: .5em;
+  margin: .3em;
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.search-btn::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+ 
+  background: white;
+  transition: top 0.3s ease, opacity 0.3s ease; /* Add opacity transition */
+}
+
+.search-btn:hover::after {
+  
+  top: 0;
+  opacity: 0.7; /* Adjust this value to control the transparency of the overlay */
+}
+
+
+
+
+
+
+/* Card section */
+.card-grid{
+  margin-top:2em;
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap:1em;
+}
+.card {
+  position: relative;
+  width: 250px; /* Set the width of your card */
+  height: auto; /* Set the height of your card */
+  overflow: hidden;
+  border:1px solid white;
+  border-radius:.4em;
+  cursor: pointer;
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Cover the entire card with the image */
+  transition: transform 0.3s;
+}
+
+.card-text {
+  position: absolute;
+  bottom: 0em;
+  width:100%;
+  
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+  color: #fff; /* Text color */
+  padding: .3em;
+  border-radius:.3em;
+
+  opacity: 0;
+    transform: translateY(100%); /* Move the content down and hide initially */
+    transition: opacity 0.3s, transform 0.3s; /* Add smooth transition for opacity and transform */
+
+
+}
+
+
+.card:hover .card-text {
+  opacity: 1; /* Make the content visible on hover */
+  transform: translateY(0); /* Move the content up on hover */
+}
+/* End of Card section */
+
+
+
+
+
+
+/* End of Movie Section  */
+
+
+
+
+
+
+/* Footer */
+/* 
+.footer {
+  background-color: #001427;
+  color: #fff; 
+  text-align: center;
+  padding: 20px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  
+} */
+
+.footer {
+  background-color: #001427;  /* Footer background color */
+  color: #fff; /* Footer text color */
+  text-align: center;
+  padding: 20px;
+  /* width: 100%; */
+  margin-top: auto; /* Push the footer to the bottom */
+}
+/* End of Footer */
+
+@media only screen and (max-width: 600px) {
+  /* Card section */
+.card-grid{
+  margin-top:2em;
+  display:grid;
+  grid-template-columns: 1fr ;
+  gap:1em;
+}
+.movie-grid{
+  margin:1em;
+  padding:.3em;
+  gap:.1em;
+}
+.desc{
+
+  width:17em;
+}
+.desc div{
+ 
+  width:auto;
+}
+
+
+.iframe{
+  width:18em;
+}
+
+iframe{
+ 
+
+  width:auto;
+  height:auto;
+}
+}
+
+/* single movie section */
+
+.movie-grid{
+
+margin:.5em;
+display:grid;
+grid-template-columns: 1fr ;
+gap:1em;
+}
+
+.desc{
+  
+  padding:.3em; 
+}
+.movie-desc{
+  padding:2em;
+  border-radius:.4em ;
+background:#000000;
+color:white;
+border: 2px solid black;
+
+width:20em;
+}
+.iframe{
+  border: 1px solid white;
+  border-radius:.4em ;
+  padding: 1em;
+  background-color: #000000;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+
+}
+iframe{
+  border-radius:.4em ;
+  border: 1px solid black;
+  width:860px; 
+ 
+  height:420px; 
+ 
+}
+
+
+
+
+/* //spinning animation */
+
+.loader-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:black;
+  /* background: rgba(255, 255, 255, 0.8); */
+  /* Semi-transparent white background */
+  z-index: 1000; /* Higher z-index to make sure it's on top of other elements */
+}
+
+.loader {
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #3498db;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
